@@ -1,0 +1,38 @@
+POST http://localhost:3333/accounts
+Content-Type: application/json
+
+{
+    "name": "Alex",
+    "balance": 100,
+    "overdraftFacility": -25
+}
+
+### Get Account by ID
+
+GET http://localhost:3333/accounts/liEspQzq0WVev2aUwE-m2
+
+### List All Accounts
+
+GET http://localhost:3333/accounts
+
+### Withdraw
+
+DELETE http://localhost:3333/accounts/liEspQzq0WVev2aUwE-m2/balance
+Content-Type: application/json
+
+{
+    "amount": 10
+}
+
+### Deposit
+
+PUT http://localhost:3333/accounts/liEspQzq0WVev2aUwE-m2/balance
+Content-Type: application/json
+
+{
+    "amount": 10
+}
+
+### List Deposits
+
+GET http://localhost:3333/accounts/liEspQzq0WVev2aUwE-m2/deposits
